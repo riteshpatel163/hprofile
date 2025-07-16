@@ -10,5 +10,11 @@ jobs:
         run: mvn test
       - name: Checkstyle
         run: mvn checkstyle:checkstyle
-        
+      - name: Checkstyle  
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '11'
+          architecture: 'x64'
+
         
